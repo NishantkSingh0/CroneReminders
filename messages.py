@@ -1,0 +1,22 @@
+REMINDER_MESSAGES = [
+    "Friendly reminder to check your inbox. There may be important emails from Oaknore awaiting your response.",
+    "Just a quick nudge to review your email inbox, especially any messages received from Oaknore.",
+    "Hope you're having a productive day. Please take a moment to check and respond to any pending Oaknore emails.",
+    "This is a gentle reminder to review your recent emails and prioritize any communication from Oaknore.",
+    "A quick heads-up: there may be emails from Oaknore that require your attention. Please check your inbox when convenient.",
+    "Please spare a few minutes to go through your inbox and respond to any pending Oaknore correspondence.",
+    "Your inbox may contain important updates from Oaknore. Kindly review and reply at your earliest convenience.",
+    "Just checking in with a friendly reminder to review your emails, particularly those from Oaknore.",
+    "A few important conversations may be waiting in your inbox. Please prioritize any Oaknore emails.",
+    "When you have a moment, please check your inbox and follow up on any pending Oaknore communications.",
+    "Friendly reminder: your timely response to Oaknore emails helps keep everything moving smoothly.",
+    "Please review your recent emails. Any pending Oaknore messages may require your prompt attention.",
+    "A quick reminder to stay on top of your inbox and respond to any outstanding emails from Oaknore.",
+    "There may be important updates waiting for you. Kindly check and respond to Oaknore emails when possible.",
+    "Just a courteous reminder to review your inbox and address any pending Oaknore correspondence.",
+    "Please take a moment to check your email. Oaknore communications may need your attention today.",
+    "Hope all is well. This is a gentle reminder to review and respond to any emails received from Oaknore.",
+    "A quick inbox check can go a long way. Please prioritize any pending Oaknore emails.",
+    "Kindly review your inbox for any outstanding Oaknore messages and respond as needed.",
+    "Just a friendly notification that there may be Oaknore emails awaiting your response. Thank you for your attention."
+]
