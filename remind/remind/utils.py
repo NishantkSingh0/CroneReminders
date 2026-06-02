@@ -27,13 +27,14 @@ def remindByMail(To_mails: list) -> None:
         print("Error:", e)
 
 
-def remindByMessage(phone_numbers: list) -> None:
+def remindByMessage() -> None:
     body = random.choice(REMINDER_MESSAGES)
 
     client = Client(
         os.getenv("TWILLIO_ACCOUNT_ID"),
         os.getenv("TWILLIO_AUTH_TOKEN")
     )
+    phone_numbers = os.getenv("PHONE_NUMBERS", "").split(", ")
 
     for number in phone_numbers:
         try:
@@ -44,7 +45,6 @@ def remindByMessage(phone_numbers: list) -> None:
             )
 
             print(f"Message sent to {number}")
-            print("SID:", msg.sid)
             print("Status:", msg.status)
 
         except Exception as e:

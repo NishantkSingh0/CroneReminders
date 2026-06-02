@@ -1,4 +1,4 @@
-import utils as ut
+from . import utils as ut
 import os
 from dotenv import load_dotenv
 load_dotenv()
