@@ -1,11 +1,22 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, renderer_classes
 from rest_framework.response import Response
 from rest_framework import status
-
+from rest_framework.renderers import JSONRenderer
+import os
 from .utils import remindByMessage
+from dotenv import load_dotenv
+load_dotenv()
 
 @api_view(["GET"])
+@renderer_classes([JSONRenderer])
 def run_reminders(request):
+    # secret = request.headers.get("X-CRON-SECRET")
+
+    # if secret != os.getenv("CRON_SECRET"):
+    #     return Response(
+    #         {"error": "Unauthorized"},
+    #         status=status.HTTP_401_UNAUTHORIZED
+    #     )
     try:
         result = remindByMessage()
 

@@ -19,6 +19,5 @@ from . import views as v
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('remind/', admin.site.urls),
+    path('remind/', v.run_reminders),
 ]

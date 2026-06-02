@@ -3,7 +3,7 @@ from sendgrid.helpers.mail import Mail
 from twilio.rest import Client
 import os
 from dotenv import load_dotenv
-from messages import REMINDER_MESSAGES
+from .messages import REMINDER_MESSAGES
 import random
 
 load_dotenv()
@@ -11,7 +11,7 @@ load_dotenv()
 
 def remindByMail(To_mails: list) -> None:
     message = Mail(
-        from_email="amishapal9927@gmail.com",
+        from_email="amishdfghj27@gmail.com",
         to_emails=To_mails,
         subject="Test Email",
         html_content="<strong>This is a test email from Django + SendGrid!</strong>"
