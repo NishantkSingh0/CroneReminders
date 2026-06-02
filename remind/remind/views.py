@@ -7,16 +7,16 @@ from .utils import remindByMessage
 from dotenv import load_dotenv
 load_dotenv()
 
-@api_view(["GET"])
+@api_view(["GET", "POST"])
 @renderer_classes([JSONRenderer])
 def run_reminders(request):
-    # secret = request.headers.get("X-CRON-SECRET")
+    secret = request.headers.get("CRON_KEY")
 
-    # if secret != os.getenv("CRON_SECRET"):
-    #     return Response(
-    #         {"error": "Unauthorized"},
-    #         status=status.HTTP_401_UNAUTHORIZED
-    #     )
+    if secret != os.getenv("CRON_SECRET"):
+        return Response(
+            {"error": "Unauthorized"},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
     try:
         result = remindByMessage()
 
