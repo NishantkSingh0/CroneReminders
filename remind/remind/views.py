@@ -10,7 +10,9 @@ load_dotenv()
 @api_view(["GET", "POST"])
 @renderer_classes([JSONRenderer])
 def run_reminders(request):
-    secret = request.GET.get("CRON_KEY")
+    secret = request.data.get("CRON_KEY")
+    if not secret:
+        secret = request.headers.get("CRON_KEY")
 
     if secret != os.getenv("CRON_SECRET"):
         return Response(
